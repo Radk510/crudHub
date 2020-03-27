@@ -1,0 +1,39 @@
+﻿@model mvcEmployeeModel
+@{
+    ViewData["Title"] = "UpdateEmployee";
+}
+
+<!-- Start of CRUD FORMS -->
+<div class="section-adminPannel-wrapper__createForm">
+    <div class="section-adminPannel-wrapper__createForm-title">
+        Update employee
+    </div>
+    @using (Html.BeginForm("UpdateEmployee", "Employee", FormMethod.Post, new { @class = "section-adminPannel-wrapper__createForm-form" }))
+    {
+        @Html.HiddenFor(model => model.EmployeeId)
+
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { placeholder = "Name" } })
+        @Html.ValidationMessageFor(model => model.Name)
+
+        @Html.EditorFor(model => model.Position, new { htmlAttributes = new { placeholder = "Position" } })
+        @Html.ValidationMessageFor(model => model.Position)
+
+        @Html.EditorFor(model => model.Age, new { htmlAttributes = new { placeholder = "Age" } })
+        @Html.ValidationMessageFor(model => model.Age)
+
+        @Html.EditorFor(model => model.Salary, new { htmlAttributes = new { placeholder = "Salary" } })
+        @Html.ValidationMessageFor(model => model.Salary)
+
+        <div class="section-adminPannel-wrapper__createForm-form-btn">
+            <button class="create" type="submit">Update</button>
+            @Html.ActionLink("Cancel", "Index", new { }, new { @class = "cancel" })
+        </div>
+    }
+
+</div>
+<!-- End of CRUD FORMS -->
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
