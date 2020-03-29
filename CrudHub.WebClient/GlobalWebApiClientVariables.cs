@@ -14,7 +14,7 @@ namespace CrudHub.WebClient
         static GlobalWebApiClientVariables()
         {
             //WebApiClient.BaseAddress = new Uri("https://crudhubwebapi.azure-api.net/api/");
-            WebApiClient.BaseAddress = new Uri("https://localhost:44357/api/");
+            WebApiClient.BaseAddress = new Uri("https://localhost:44327/api/");
             WebApiClient.DefaultRequestHeaders.Clear();
             WebApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
