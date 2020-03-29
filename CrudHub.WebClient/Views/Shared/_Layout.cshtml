@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/createEdit.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://kit.fontawesome.com/f8896b2296.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Start of Section-Header -->
+    <section class="section-outer section-header">
+        <div class="section-inner">
+            <div class="section-header-logo">
+                <a href="/">CRUDHub</a>
+            </div>
+        </div>
+    </section>
+    <!-- End of Section-Header -->
+    <!-- Start of Section-Admin Crud Pannel -->
+    <section class="section-outer section-adminPannel">
+        <div class="section-inner">
+            <div class="section-adminPannel-wrapper">
+
+                <!-- Start of Section-Admin Crud Pannel DASH LINKS -->
+                <div class="section-adminPannel-wrapper__infoAndLinks">
+                    <div class="section-adminPannel-wrapper__infoAndLinks-adminInfo">
+                        <div class="section-adminPannel-wrapper__infoAndLinks-adminInfo-img">
+                            <img src="~/img/admin.png" alt="admin image">
+                        </div>
+                        <div class="section-adminPannel-wrapper__infoAndLinks-adminInfo-name">Roman Kutepov</div>
+                        <div class="section-adminPannel-wrapper__infoAndLinks-adminInfo-position">Brain Director</div>
+                    </div>
+                    <div class="section-adminPannel-wrapper__infoAndLinks-links">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i>Users</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i>Authentication</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i>Typography</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-tachometer-alt"></i>Icons & Images</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End of Section-Admin Crud Pannel DASH LINKS -->
+                <!-- Start of Section-Admin Crud Pannel CRUD ITEMS -->
+                @RenderBody()
+                <!-- End of Section-Admin Crud Pannel CRUD ITEMS -->
+
+            </div>
+        </div>
+    </section>
+    <!-- End of Section-Admin Crud Pannel -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script><!--подключение jquery-->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)      <!--подключение скриптов валидации после jquery-->
+</body>
+</html>

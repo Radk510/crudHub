@@ -1,0 +1,49 @@
+﻿@model IEnumerable<mvcEmployeeModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Start of Section-Admin Crud Pannel CRUD ITEMS -->
+<div class="section-adminPannel-wrapper__crudItems">
+    <div class="createBtn">
+        @Html.ActionLink("Create new", "CreateEmployee", new { } , new { @class = "createBtnStyles fas fa-plus" })
+        @*<button class="createBtnStyles"><i class="fas fa-plus"></i>Create new</button>*@
+    </div>
+    <table>
+        <caption>Employees</caption>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Position)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Position</td>
+                <td>@employee.Age</td>
+                <td>@employee.Salary</td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateEmployee", new { id = employee.EmployeeId }, new { @class = "actionBtn edit fas fa-edit" })
+                    @Html.ActionLink("Delete", "DeleteEmployee", new { id = employee.EmployeeId }, new { @class = "actionBtn delete fas fa-trash-alt" })
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- End of Section-Admin Crud Pannel CRUD ITEMS -->

@@ -1,0 +1,201 @@
+// Common
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.section-inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+// /Common
+// ====  Variables
+// screen size vars
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xs-max: 575px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+//  / screen size vars
+// ==== / Variables
+// Section-Header
+.section-header {
+    padding-top: 20px;
+    background-color: #3F51B5;
+    height: 64px;
+    .section-header-logo {
+        margin-left: 20px;
+        font-size: 20px;
+        line-height: 24px;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+// / Section-Header
+// Section-Admin Crud Pannel
+.section-adminPannel {
+    &-wrapper {
+        &__infoAndLinks {
+            flex-grow: -1;
+            margin: 0 16px;
+            padding: 25px 0;
+            &-adminInfo {
+                border-bottom: 1px solid #E4E7EB;
+                &-img {
+                    margin-bottom: 16px;
+                }
+                &-name {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #3A3B3F;
+                    margin-bottom: 5px;
+                }
+                &-position {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #9EA0A5;
+                }
+            }
+            &-links {
+                border-bottom: 1px solid #E4E7EB;
+                padding: 20px 0;
+                li+li {
+                    margin-top: 34px;
+                }
+                li {
+                    list-style: none;
+                    a {
+                        font-weight: bold;
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #66788A;
+                    }
+                    .fas {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            @media(max-width: $screen-md-max) {
+                text-align: center;
+            }
+            @media(min-width: $screen-lg) {
+                &-adminInfo {
+                    padding: 0 80px 23px;
+                }
+            }
+        }
+        &__crudItems {
+            flex-grow: 1;
+            margin: 0 20px;
+            .createBtn {
+                .createBtnStyles {
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+                    background-color: #3F51B5;
+                    color: #fff;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: ease .2s;
+                    bottom: 0;
+                }
+                .createBtnStyles:hover {
+                    bottom: 5px;
+                    transition: ease .3s;
+                }
+                .fas {
+                    margin-right: 5px;
+                }
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                caption {
+                    color: #3A3B3F;
+                    font-size: 25px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                th,
+                td {
+                    border-top: 1px solid #E4E7EB;
+                    border-bottom: 1px solid #E4E7EB;
+                    padding: 18px 0;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #3A3B3F;
+                }
+                .actionBtn {
+                    cursor: pointer;
+                    padding: 5px;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    outline: none;
+                    position: relative;
+                    transition: ease .2s;
+                    bottom: 0;
+                }
+                .actionBtn:hover {
+                    bottom: 5px;
+                    transition: ease .3s;
+                }
+                button .fas {
+                    margin-right: 5px;
+                }
+                .edit {
+                    background-color: #3F51B5;
+                    color: #fff;
+                }
+                .edit:active {
+                    background-color: rgb(29, 40, 104);
+                }
+                .delete {
+                    background-color: rgb(241, 59, 114);
+                    color: #fff;
+                }
+                .delete:active {
+                    background-color: rgb(155, 6, 50);
+                }
+            }
+            @media(max-width: $screen-md-max) {
+                .createBtn {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+            }
+            @media(min-width: $screen-lg) {
+                .createBtn {
+                    text-align: end;
+                }
+            }
+        }
+        @media(min-width: $screen-lg) {
+            display: flex;
+            &__crudItems {
+                padding-top: 80px;
+            }
+        }
+    }
+}
+
+//  / Section-Admin Crud Pannel
