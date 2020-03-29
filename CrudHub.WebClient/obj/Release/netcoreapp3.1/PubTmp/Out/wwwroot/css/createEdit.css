@@ -1,0 +1,55 @@
+.section-adminPannel-wrapper__createForm {
+  flex-grow: 1;
+  margin: 0 20px 20px; }
+  .section-adminPannel-wrapper__createForm-title {
+    text-align: center;
+    color: #3A3B3F;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .section-adminPannel-wrapper__createForm-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto; }
+    .section-adminPannel-wrapper__createForm-form input + input {
+      margin-top: 20px; }
+    .section-adminPannel-wrapper__createForm-form input {
+      color: #5c5c5c;
+      padding: 10px 15px;
+      border: none;
+      border-bottom: 2px solid #E4E7EB;
+      outline: none; }
+    .section-adminPannel-wrapper__createForm-form-btn {
+      text-align: end;
+      margin-top: 30px; }
+      .section-adminPannel-wrapper__createForm-form-btn button + button {
+        margin-left: 10px; }
+      .section-adminPannel-wrapper__createForm-form-btn button,
+      .section-adminPannel-wrapper__createForm-form-btn a {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background-color: #3F51B5;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        transition: ease .2s;
+        bottom: 0; }
+      .section-adminPannel-wrapper__createForm-form-btn button:hover,
+      .section-adminPannel-wrapper__createForm-form-btn a:hover {
+        bottom: 5px;
+        transition: ease .3s; }
+      .section-adminPannel-wrapper__createForm-form-btn .cancel {
+        background-color: #f13b72; }
+    .section-adminPannel-wrapper__createForm-form .field-validation-error {
+      color: #f13b72;
+      font-size: 12px;
+      text-align: end; }
+    .section-adminPannel-wrapper__createForm-form .input-validation-error {
+      border-color: #f13b72; }
+  @media (min-width: 992px) {
+    .section-adminPannel-wrapper__createForm {
+      padding-top: 80px; } }

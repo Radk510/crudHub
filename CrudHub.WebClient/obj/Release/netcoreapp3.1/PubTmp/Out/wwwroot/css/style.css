@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  cursor: default; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0; }
+
+.section-inner {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.section-header {
+  padding-top: 20px;
+  background-color: #3F51B5;
+  height: 64px; }
+  .section-header .section-header-logo {
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 24px; }
+    .section-header .section-header-logo a {
+      text-decoration: none;
+      color: #fff; }
+
+.section-adminPannel-wrapper__infoAndLinks {
+  flex-grow: -1;
+  margin: 0 16px;
+  padding: 25px 0; }
+  .section-adminPannel-wrapper__infoAndLinks-adminInfo {
+    border-bottom: 1px solid #E4E7EB; }
+    .section-adminPannel-wrapper__infoAndLinks-adminInfo-img {
+      margin-bottom: 16px; }
+    .section-adminPannel-wrapper__infoAndLinks-adminInfo-name {
+      font-size: 16px;
+      line-height: 20px;
+      color: #5c5c5c;
+      margin-bottom: 5px; }
+    .section-adminPannel-wrapper__infoAndLinks-adminInfo-position {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9EA0A5; }
+  .section-adminPannel-wrapper__infoAndLinks-links {
+    border-bottom: 1px solid #E4E7EB;
+    padding: 20px 0; }
+    .section-adminPannel-wrapper__infoAndLinks-links li + li {
+      margin-top: 34px; }
+    .section-adminPannel-wrapper__infoAndLinks-links li {
+      list-style: none; }
+      .section-adminPannel-wrapper__infoAndLinks-links li a {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
+        color: #66788A; }
+      .section-adminPannel-wrapper__infoAndLinks-links li .fas {
+        margin-right: 10px; }
+  @media (max-width: 991px) {
+    .section-adminPannel-wrapper__infoAndLinks {
+      text-align: center; } }
+  @media (min-width: 992px) {
+    .section-adminPannel-wrapper__infoAndLinks-adminInfo {
+      padding: 0 80px 23px; } }
+
+.section-adminPannel-wrapper__crudItems {
+  margin-bottom: 20px;
+  flex-grow: 1; }
+  .section-adminPannel-wrapper__crudItems .createBtn .createBtnStyles {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3F51B5;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    transition: ease .2s;
+    bottom: 0; }
+  .section-adminPannel-wrapper__crudItems .createBtn .createBtnStyles::before {
+    margin-right: 5px; }
+  .section-adminPannel-wrapper__crudItems .createBtn .createBtnStyles:hover {
+    bottom: 5px;
+    transition: ease .3s; }
+  .section-adminPannel-wrapper__crudItems .createBtn .fas {
+    margin-right: 5px; }
+  .section-adminPannel-wrapper__crudItems table {
+    width: 100%;
+    border-collapse: collapse; }
+    .section-adminPannel-wrapper__crudItems table caption {
+      color: #3A3B3F;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 20px; }
+    .section-adminPannel-wrapper__crudItems table th,
+    .section-adminPannel-wrapper__crudItems table td {
+      border-top: 1px solid #E4E7EB;
+      border-bottom: 1px solid #E4E7EB;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3A3B3F; }
+    .section-adminPannel-wrapper__crudItems table .actionBtn {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 10px;
+      outline: none;
+      position: relative;
+      transition: ease .2s;
+      bottom: 0; }
+    .section-adminPannel-wrapper__crudItems table .actionBtn:hover {
+      bottom: 5px;
+      transition: ease .3s; }
+    .section-adminPannel-wrapper__crudItems table .actionBtn::before {
+      margin-right: 5px; }
+    .section-adminPannel-wrapper__crudItems table .edit {
+      background-color: #3F51B5;
+      color: #fff; }
+    .section-adminPannel-wrapper__crudItems table .edit:active {
+      background-color: #1d2868; }
+    .section-adminPannel-wrapper__crudItems table .delete {
+      background-color: #f13b72;
+      color: #fff; }
+    .section-adminPannel-wrapper__crudItems table .delete:active {
+      background-color: #9b0632; }
+  @media (max-width: 991px) {
+    .section-adminPannel-wrapper__crudItems .createBtn {
+      text-align: center;
+      margin: 20px 0; } }
+  @media (min-width: 992px) {
+    .section-adminPannel-wrapper__crudItems .createBtn {
+      text-align: end; } }
+
+@media (min-width: 992px) {
+  .section-adminPannel-wrapper {
+    display: flex; }
+    .section-adminPannel-wrapper__crudItems {
+      padding-top: 80px; } }
